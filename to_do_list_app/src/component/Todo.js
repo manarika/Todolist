@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Listitem from "./Listitem";
 
 export default function Todo(){
     const [todo,setTodo]=useState()
@@ -15,9 +16,10 @@ export default function Todo(){
     return <div>
         <form onSubmit={handlesubmit}>
         <input value={todo} onChange={handlechange} type="text" />
-        <button type="submit">Submit</button>
+        <button type="submit">Add</button>
 
         </form>
-        {todolist.map((item)=>(<h3>{item}</h3>))}
+        {todolist.map((item)=>(<Listitem name={item} key={item}></Listitem>))}
+
     </div>
 }
