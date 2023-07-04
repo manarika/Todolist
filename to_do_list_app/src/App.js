@@ -1,11 +1,18 @@
-import Todo from "./component/Todo";
+import Form from "./component/Form";
 import Header from "./component/Header";
+import {useState} from "react";
 
 function App() {
-  return (
+    const [todo,setTodo]=useState('')
+    const [todolist,setTodoList]=useState([])
+
+    return (
     <div className="App">
         <Header></Header>
-     <Todo></Todo>
+     <Form todo={todo}
+           settodo={setTodo}
+           todolist={todolist}
+           settodolist={setTodoList}></Form>
     </div>
   );
 }
