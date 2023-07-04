@@ -1,20 +1,24 @@
+import {useState} from "react";
 import Form from "./component/Form";
 import Header from "./component/Header";
-import {useState} from "react";
+import Listitem from "./component/Listitem";
 
 function App() {
-    const [todo,setTodo]=useState('')
-    const [todolist,setTodoList]=useState([])
+    const [todo, setTodo] = useState('');
+    const [todolist, setTodoList] = useState([]);
 
     return (
-    <div className="App">
-        <Header></Header>
-     <Form todo={todo}
-           settodo={setTodo}
-           todolist={todolist}
-           settodolist={setTodoList}></Form>
-    </div>
-  );
+        <div className="App">
+            <Header></Header>
+            <Form
+                todo={todo}
+                settodo={setTodo}
+                todolist={todolist}
+                settodolist={setTodoList}
+            />
+            <Listitem todolist={todolist} setTodoList={setTodoList} />
+        </div>
+    );
 }
 
 export default App;

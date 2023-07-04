@@ -34,6 +34,27 @@ body{
     border-bottom: 1px solid lightgray;
     margin-top: 20px;
     font-size: 1.2em;
-    color:gray;
+    color:whitesmoke;
+}
 
+.todoitem{
+    margin:auto;
+    border: 2px solid whitesmoke;
+    padding:20px;
+    margin-top: 20px;
+}
+.todoname{
+
+}
+
+.deletebutton{
+    width: 100px;
+    border:none;
+    height:50px ;
+    background-color: sandybrown;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
+    border-radius: 2px;
+    color:whitesmoke;
 }
